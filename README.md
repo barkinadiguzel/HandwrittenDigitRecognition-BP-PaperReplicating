@@ -1,2 +1,49 @@
-# HandwrittenDigitRecognition-BP-PaperReplicating
-This repository replicates the 1989 handwritten digit recognition paper by LeCun et al. using a back-propagation network in PyTorch, achieving high accuracy with minimal preprocessing.
+# ✏️ Handwritten Digit Recognition with Back-Propagation Network
+
+This repository contains a replication of the classic paper **"Handwritten Digit Recognition with a Back-Propagation Network"** by LeCun et al., AT&T Bell Laboratories. The goal is to implement the network as described in the paper, using minimal preprocessing and a constrained architecture to perform handwritten digit recognition.
+
+📄 **Paper link:** [Handwritten Digit Recognition with a Back-Propagation Network (PDF)](http://yann.lecun.com/exdb/publis/pdf/lecun-89.pdf)
+
+---
+
+## 🖼 About the Dataset
+
+The original USPS digit dataset was used in the paper. However, there were issues downloading and processing the raw USPS data. To make things easier, a preprocessed HDF5 file (`usps.h5`) is provided, containing all training and testing images and labels in a ready-to-use format.  
+
+Images have been normalized to `[-1, 1]` and resized to `16x16` pixels following the preprocessing described in the paper.
+
+---
+
+## 🗂 Project Structure
+
+```bash
+
+HandwrittenDigitRecognition-BP-PaperReplicating/
+│
+├── data/
+│   ├── train/
+│   ├── test/
+│   └── usps.h5
+│
+├── dataproc/
+│   ├── preprocess.py
+│   └── preview.py
+│
+├── models/
+│   ├── bp_network.py
+│   └── layers.py
+│
+├── utils/
+│   ├── dataset.py
+│   ├── metrics.py
+│   └── visualization.py
+│
+├── requirements.txt
+└── README.md
+
+
+```
+---
+## 🔗 Feedback
+
+For feedback or questions, contact: [barkin.adiguzel@gmail.com](mailto:barkin.adiguzel@gmail.com)
