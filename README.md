@@ -2,7 +2,7 @@
 
 This repository contains a replication of the classic paper **"Handwritten Digit Recognition with a Back-Propagation Network"** by LeCun et al., AT&T Bell Laboratories. The goal is to implement the network as described in the paper, using minimal preprocessing and a constrained architecture to perform handwritten digit recognition.
 
-📄 **Paper link:** [Handwritten Digit Recognition with a Back-Propagation Network (PDF)](http://yann.lecun.com/exdb/publis/pdf/lecun-89.pdf)
+📄 **Paper link:** [Handwritten Digit Recognition with a Back-Propagation Network (PDF)]([http://yann.lecun.com/exdb/publis/pdf/lecun-89.pdf](https://proceedings.neurips.cc/paper_files/paper/1989/file/53c3bce66e43be4f209556518c2fcb54-Paper.pdf))
 
 ---
 
