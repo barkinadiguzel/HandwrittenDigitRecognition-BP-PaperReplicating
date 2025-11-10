@@ -14,6 +14,16 @@ Images have been normalized to `[-1, 1]` and resized to `16x16` pixels following
 
 ---
 
+## 🏗️ Model Architecture
+
+The network architecture follows the design described in **Figure 4** of the original paper.  
+
+![Handwritten Digit Recognition Model](images/fig4.png)
+
+The figure illustrates the fully connected back-propagation network used for digit recognition, showing the input layer, hidden layers, and output layer with 10 neurons corresponding to the digits 0-9.
+
+---
+
 ## 🗂 Project Structure
 
 ```bash
