@@ -1,33 +1,34 @@
-# ✏️ Handwritten Digit Recognition with Back-Propagation Network
+# ✏️ Handwritten Digit Recognition – Back-Propagation Network
 
-This repository contains a replication of the classic paper **"Handwritten Digit Recognition with a Back-Propagation Network"** by LeCun et al., AT&T Bell Laboratories. The goal is to implement the network as described in the paper, using minimal preprocessing and a constrained architecture to perform handwritten digit recognition.
+Replication of **“Handwritten Digit Recognition with a Back-Propagation Network”** (LeCun et al., 1989, AT&T Bell Labs). This project reproduces the network and methodology with minimal preprocessing to classify handwritten digits (0–9).
 
-**Paper**: [Handwritten Digit Recognition with a Back-Propagation Network (NeurIPS 1989)](https://proceedings.neurips.cc/paper_files/paper/1989/file/53c3bce66e43be4f209556518c2fcb54-Paper.pdf)
+**Paper:** [Handwritten Digit Recognition with a Back-Propagation Network](https://proceedings.neurips.cc/paper_files/paper/1989/file/53c3bce66e43be4f209556518c2fcb54-Paper.pdf)
 
 ---
 
-## 🖼 About the Dataset
+## 🖼 Overview – Model & Dataset
 
-The original USPS digit dataset was used in the paper. However, there were issues downloading and processing the raw USPS data. To make things easier, a preprocessed HDF5 file (`usps.h5`) is provided, containing all training and testing images and labels in a ready-to-use format.  
+![Figure Overview](images/figmix.jpg)  
+This project implements a **fully connected back-propagation network** for handwritten digit recognition.
 
-Images have been normalized to `[-1, 1]` and resized to `16x16` pixels following the preprocessing described in the paper.
+- **Input:** 16×16 pixel grayscale images from the USPS dataset, normalized to `[-1, 1]`.  
+- **Architecture:** Input layer → Hidden layers → Output layer with 10 neurons (digits 0–9).  
+- **Purpose:** Learn a mapping from image pixels to digit classes using **gradient descent and back-propagation**.  
+- **Highlights:** Minimal preprocessing, constrained architecture, faithful replication of the original LeCun et al. design.
+
+---
+
+## 🧮 Key Mathematical Idea
+
+![Math Concept](images/math.jpg)  
+
+>This figure summarizes the core learning mechanism of the network: how errors are propagated backward to update weights and biases, enabling the network to map input pixels to digit classes efficiently.
 
 ---
 
 ## 🏗️ Model Architecture
 
-The network architecture follows the design described in **Figure 4** of the original paper.  
-
-![Handwritten Digit Recognition Model](images/fig4.png)
-
-The figure illustrates the fully connected back-propagation network used for digit recognition, showing the input layer, hidden layers, and output layer with 10 neurons corresponding to the digits 0-9.
-
----
-
-## 🗂 Project Structure
-
 ```bash
-
 HandwrittenDigitRecognition-BP-PaperReplicating/
 │
 ├── data/
@@ -48,9 +49,12 @@ HandwrittenDigitRecognition-BP-PaperReplicating/
 │   ├── metrics.py
 │   └── visualization.py
 │
+├── images/
+│   ├── figmix.jpg       # Model & dataset overview
+│   └── math.jpg         # Key equations & backprop math
+│
 ├── requirements.txt
 └── README.md
-
 
 ```
 ---
